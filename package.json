@@ -1,18 +1,16 @@
 {
-  "author": {
-      "name": "@naterchrdsn"
-  },
-  "dependencies": {
-    	"xml2js": "^0.4.17"
-  },
-  "description": "adds the !define command to Kirbi",
-  "devDependencies": {},
-  "license": "Apache-2.0",
-  "name": "kirbi-dictionary",
-  "optionalDependencies": {},
-  "repository": {
-      "type": "git",
-      "url": "git+https://github.com/Richardson-Media-House/kirbi-dictionary.git"
-  },
-  "version": "0.0.1"
+	"author": "Nate Richardson <hello@naterichardson.com> (https://naterichardson.com)",
+	"dependencies": {
+		"xml2js": "^0.4.17"
+	},
+	"description": "adds the !define command to Kirbi",
+	"devDependencies": {},
+	"license": "Apache-2.0",
+	"name": "kirbi-dictionary",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Richardson-Media-House/kirbi-dictionary.git"
+	},
+	"version": "0.0.1",
+	"main": "dictionary.js"
 }

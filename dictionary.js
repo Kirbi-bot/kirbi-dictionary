@@ -16,7 +16,7 @@ exports.define = {
 		if (!word) {
 			cb({
 				embed: {
-					color: Kirbi.Config.defaultEmbedColor,
+					color: Kirbi.Config.discord.defaultEmbedColor,
 					description: 'I won\'t define an empty string.'
 				}
 			}, msg);
@@ -62,7 +62,7 @@ exports.define = {
 
 					cb({
 						embed: {
-							color: Kirbi.Config.defaultEmbedColor,
+							color: Kirbi.Config.discord.defaultEmbedColor,
 							title: word,
 							description: definitionResult
 						}
