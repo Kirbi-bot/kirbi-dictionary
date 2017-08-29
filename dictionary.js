@@ -63,7 +63,11 @@ module.exports = function (config, auth) {
 								embed: {
 									color: config.discord.defaultEmbedColor,
 									title: word,
-									description: definitionResult
+									description: definitionResult,
+									footer: {
+										text: 'powered by Merriam-Webster\'s Collegiate® Dictionary',
+										icon_url: 'http://www.dictionaryapi.com/images/info/branding-guidelines/mw-logo-light-background-50x50.png'
+									}
 								}
 							}, msg);
 						});
