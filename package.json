@@ -1,16 +1,38 @@
 {
-	"author": "Nate Richardson <hello@naterichardson.com> (https://naterichardson.com)",
-	"dependencies": {
-		"xml2js": "^0.4.17"
-	},
-	"description": "adds the !define command to Kirbi",
-	"devDependencies": {},
-	"license": "Apache-2.0",
-	"name": "kirbi-dictionary",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Richardson-Media-House/kirbi-dictionary.git"
-	},
-	"version": "0.0.1",
-	"main": "dictionary.js"
+  "name": "kirbi-dictionary",
+  "description": "adds the !define command to Kirbi",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Richardson-Media-House/kirbi-dictionary.git"
+  },
+  "author": "Nate Richardson <hello@naterichardson.com> (https://naterichardson.com)",
+  "contributors": [
+    "Matt Carroll <admin@develogix.com> (https://develogix.com)",
+    "Joseph Moran III <joseph.moraniii@gmail.com> (https://josephmoran.co)"
+  ],
+  "main": "dictionary.js",
+  "dependencies": {
+    "request": "^2.81.0",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "rules": {
+      "linebreak-style": [
+        "error",
+        "windows"
+      ],
+      "no-prototype-builtins": "warn",
+      "radix": "warn",
+      "guard-for-in": "warn"
+    }
+  },
+  "scripts": {
+    "test": "xo"
+  }
 }
