@@ -2,7 +2,7 @@ var util = require('util');
 var xml2js = require('xml2js');
 var parser = new xml2js.Parser();
 
-module.exports = function (config, auth) {
+module.exports = function (Kirbi) {
 	return {
 		commands: [
 			'define'
@@ -15,7 +15,7 @@ module.exports = function (config, auth) {
 				if (!word) {
 					cb({
 						embed: {
-							color: config.discord.defaultEmbedColor,
+							color: Kirbi.Config.discord.defaultEmbedColor,
 							description: 'I won\'t define an empty string.'
 						}
 					}, msg);
@@ -23,7 +23,7 @@ module.exports = function (config, auth) {
 					return;
 				}
 		
-				require('request')(`http://www.dictionaryapi.com/api/v1/references/collegiate/xml/${word}?key=${auth.dictionary_api_key}`,
+				require('request')(`http://www.dictionaryapi.com/api/v1/references/collegiate/xml/${word}?key=${Kirbi.Auth.dictionary_api_key}`,
 					function (err, res, body) {
 						let definitionResult = "";
 						parser.parseString(body, function (err, result) {
@@ -61,7 +61,7 @@ module.exports = function (config, auth) {
 		
 							cb({
 								embed: {
-									color: config.discord.defaultEmbedColor,
+									color: Kirbi.Config.discord.defaultEmbedColor,
 									title: word,
 									description: definitionResult,
 									footer: {
