@@ -1,6 +1,6 @@
 const xml2js = require('xml2js');
 
-module.exports = function (Kirbi) {
+module.exports = Kirbi => {
 	const parser = new xml2js.Parser();
 	return {
 		commands: [
